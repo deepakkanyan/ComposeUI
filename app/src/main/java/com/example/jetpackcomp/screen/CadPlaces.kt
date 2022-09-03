@@ -55,7 +55,7 @@ fun CadPlaces() {
                 LazyVerticalGrid(
                     contentPadding = innerPadding,
                     verticalArrangement = Arrangement.spacedBy(12.dp),
-                    cells = GridCells.Fixed(2)
+                    cells = GridCells.Fixed(3)
                 ) {
                     val list =  getPropertyDetails()
                     items(count = list.size) {
