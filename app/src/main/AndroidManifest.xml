@@ -14,9 +14,8 @@
         android:theme="@style/Theme.JetPackComp"
         tools:targetApi="31">
         <activity
-            android:name=".screen.SplashActivity"
+            android:name=".screen.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.JetPackComp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
