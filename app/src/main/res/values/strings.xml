@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">JetPackComp</string>
+    <string name="movie_list">ComposeUI Movies</string>
 </resources>
