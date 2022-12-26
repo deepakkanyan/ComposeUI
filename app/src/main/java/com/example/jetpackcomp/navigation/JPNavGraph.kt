@@ -42,7 +42,7 @@ fun JPNavigation(
                 }
             )
         ) { backStackEntry ->
-            MovieDetailsUI(backStackEntry.arguments?.getString(ArgKeys.valueKey))
+            MovieDetailsUI(backStackEntry.arguments?.getString(ArgKeys.valueKey),navController)
         }
     }
 }

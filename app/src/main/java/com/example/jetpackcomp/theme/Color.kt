@@ -3,7 +3,7 @@ package com.example.jetpackcomp.theme
 import androidx.compose.ui.graphics.Color
 
 object JPColors {
-    val Background = Color(0xFFE0F2F1)
+    val Background = Color(0xFFFFFFFF)
     val Primary   = Color(0xFFDD0708)
     val Secondary = Color(0xFFFFCDD2)
     val Accent    = Color(0xFFDD0708)

@@ -9,7 +9,6 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
@@ -22,7 +21,6 @@ import coil.compose.AsyncImage
 import com.example.jetpackcomp.R
 import com.example.jetpackcomp.navigation.Route
 import com.example.jetpackcomp.theme.JPColors
-import com.example.jetpackcomp.ui.theme.MyTypography
 import com.example.jetpackcomp.ui.viewmodel.MovieViewModel
 import com.example.jetpackcomp.utils.CommonJetpackUI
 import com.example.jetpackcomp.utils.JPConstants
@@ -57,15 +55,7 @@ fun MovieListUI(navController : NavHostController){
                             contentScale = ContentScale.FillBounds
                         )
 
-                        Text(
-                            text = movie.voteAverage.toString(),
-                            Modifier
-                                .padding(5.dp)
-                                .background(JPColors.Primary, shape = RoundedCornerShape(3.dp))
-                                .padding(start = 10.dp, end = 10.dp, top = 2.dp, bottom = 2.dp),
-                            maxLines = 1,
-                            style = MyTypography.labelSmall.copy(color = JPColors.White)
-                        )
+                        CommonJetpackUI.ratingView(rating = movie.voteAverage.toString())
 
                     }
 
