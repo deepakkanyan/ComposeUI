@@ -1,27 +1,29 @@
 package com.example.jetpackcomp.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 
 data class PopularMovieData(
     @Json(name = "page")
     val page: Long,
     @Json(name = "results")
-    val results: List<MovieList>,
+    val results: List<MovieDetails>,
     @Json(name = "total_pages")
     val totalPages: Long,
     @Json(name = "total_results")
     val totalResults: Long
 )
 
-data class MovieList(
+@Entity(tableName = "movie_list")
+data class MovieDetails(
+    @Json(name = "id")
+    @PrimaryKey
+    val id: Long,
     @Json(name = "adult")
     val adult: Boolean,
     @Json(name = "backdrop_path")
     val backdropPath: String,
-    @Json(name = "genre_ids")
-    val genreIDS: List<Long>,
-    @Json(name = "id")
-    val id: Long,
     @Json(name = "original_language")
     val originalLanguage: String,
     @Json(name = "original_title")
