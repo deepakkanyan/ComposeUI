@@ -10,13 +10,12 @@ Topic
 # Kotlin
 # Room
 
-<div class="list">
- <style>
-  .list{display:flex}
-  </style>
-<img src="https://github.com/deepakkanyan/ComposeUI/blob/main/screenshots/List.webp" width="400" height="auto" >
-<img src="https://github.com/deepakkanyan/ComposeUI/blob/main/screenshots/details.webp" width="400" height="auto">
-</div>
+<table style="width:100%">
+  <tr>
+    <td><img src="https://github.com/deepakkanyan/ComposeUI/blob/main/screenshots/List.webp" width="400" height="auto" ></td>
+    <td><img src="https://github.com/deepakkanyan/ComposeUI/blob/main/screenshots/details.webp" width="400" height="auto"></td>
+ </tr>
+</table>
 
 ## Authors
 
