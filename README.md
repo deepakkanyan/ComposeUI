@@ -1,10 +1,10 @@
 
 # ComposeUI Movies   🎬
 
-# JETPACK COMPOSE-UI WITH NAVIGATION GRAPH & CLEAN ARCHITECTURE.
+## JETPACK COMPOSE-UI WITH NAVIGATION GRAPH & CLEAN ARCHITECTURE.
 
 
-## APP SCREEN-SHOT :
+### APP SCREEN-SHOT :
 <table style="width:100%">
   <tr>
     <td><img src="https://github.com/deepakkanyan/ComposeUI/blob/main/screenshots/List.webp" width="400" height="auto" ></td>
