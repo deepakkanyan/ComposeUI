@@ -10,7 +10,7 @@ Topic
 # Kotlin
 # Room
 
-<img src="https://github.com/deepakkanyan/ComposeUI/blob/main/screenshots/List.webp" width="400" height="900">
+<img src="https://github.com/deepakkanyan/ComposeUI/blob/main/screenshots/List.webp" width="400" height="700">
 
 ## Authors
 
