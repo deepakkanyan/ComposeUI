@@ -1,10 +1,10 @@
 
 # ComposeUI Movies   🎬
 
-## JETPACK COMPOSE-UI WITH NAVIGATION GRAPH & CLEAN ARCHITECTURE.
+## Jetpack Compose ui with navigation graph & clean architecture.
 
 
-### APP SCREEN-SHOT :
+### Screenshot:
 <table style="width:100%">
   <tr>
     <td><img src="https://github.com/deepakkanyan/ComposeUI/blob/main/screenshots/List.webp" width="400" height="auto" ></td>
@@ -22,13 +22,13 @@ Topic
 ### Room
 
 
-## MOVIE API USED FROM :
+## MovieDB api used from :
 - [MOVIE DB](https://developers.themoviedb.org/)
 
 
 
 
-## Authors
+## Author
 - [@deepakkanyan](https://github.com/deepakkanyan/ComposeUI)
 
 
