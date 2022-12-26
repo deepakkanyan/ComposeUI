@@ -1,7 +1,16 @@
 
 # ComposeUI Movies   🎬
 
-This project demonstrate the required Skills in Jetpack ComposeUI with Clean Architecture.
+# JETPACK COMPOSE-UI WITH NAVIGATION GRAPH & CLEAN ARCHITECTURE.
+
+
+## APP SCREEN-SHOT :
+<table style="width:100%">
+  <tr>
+    <td><img src="https://github.com/deepakkanyan/ComposeUI/blob/main/screenshots/List.webp" width="400" height="auto" ></td>
+    <td><img src="https://github.com/deepakkanyan/ComposeUI/blob/main/screenshots/details.webp" width="400" height="auto"></td>
+ </tr>
+</table>
 
 Topic
 ### ComposeUI
@@ -15,13 +24,6 @@ Topic
 
 ## MOVIE API USED FROM :
 - [MOVIE DB](https://developers.themoviedb.org/)
-
-<table style="width:100%">
-  <tr>
-    <td><img src="https://github.com/deepakkanyan/ComposeUI/blob/main/screenshots/List.webp" width="400" height="auto" ></td>
-    <td><img src="https://github.com/deepakkanyan/ComposeUI/blob/main/screenshots/details.webp" width="400" height="auto"></td>
- </tr>
-</table>
 
 
 
