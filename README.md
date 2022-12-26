@@ -4,13 +4,13 @@
 This project demonstrate the required Skills in Jetpack ComposeUI with Clean Architecture.
 
 Topic
-# ComposeUI
-# Clean Architecture
-# View Model
-# Hilt
-# Retrofit
-# Kotlin
-# Room
+### ComposeUI
+### Clean Architecture
+### View Model
+### Hilt
+### Retrofit
+### Kotlin
+### Room
 
 
 ## MOVIE API USED FROM :
