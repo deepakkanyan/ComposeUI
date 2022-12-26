@@ -4,13 +4,17 @@
 This project demonstrate the required Skills in Jetpack ComposeUI with Clean Architecture.
 
 Topic
+# ComposeUI
 # Clean Architecture
 # View Model
 # Hilt
 # Retrofit
 # Kotlin
 # Room
-#  
+
+
+## MOVIE API USED FROM :
+- [MOVIE DB](https://developers.themoviedb.org/)
 
 <table style="width:100%">
   <tr>
@@ -19,8 +23,10 @@ Topic
  </tr>
 </table>
 
-## Authors
 
+
+
+## Authors
 - [@deepakkanyan](https://github.com/deepakkanyan/ComposeUI)
 
 
