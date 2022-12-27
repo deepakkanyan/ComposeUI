@@ -7,9 +7,9 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.jetpackcomp.theme.JPColors
-import com.example.jetpackcomp.ui.composeUI.MovieDetailsUI
-import com.example.jetpackcomp.ui.composeUI.MovieListUI
+import com.example.jetpackcomp.theme.Background
+import com.example.jetpackcomp.ui.pages.MovieDetailsPage
+import com.example.jetpackcomp.ui.pages.MovieListPage
 import com.example.jetpackcomp.ui.viewmodel.MovieViewModel
 
 
@@ -22,14 +22,14 @@ object Route {
 fun JPNavigation(
     navController: NavHostController,
     viewModel: MovieViewModel) {
-    NavHost(navController = navController, startDestination = Route.DashBoardMovie, Modifier.background(
-        JPColors.Background)) {
+    NavHost(navController = navController, startDestination = Route.DashBoardMovie,
+        Modifier.background(Background)) {
 
         composable(route = Route.DashBoardMovie) {
-            MovieListUI(navController = navController,viewModel)
+            MovieListPage(navController = navController,viewModel)
         }
         composable(route = Route.DetailsMovie) {
-            MovieDetailsUI(navController,viewModel)
+            MovieDetailsPage(navController,viewModel)
         }
     }
 }

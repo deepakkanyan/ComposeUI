@@ -26,7 +26,7 @@ class MovieViewModel @Inject constructor(private val getPopularMovieList: GetPop
     val movieDetails : LiveData<MovieDetails> = _movieDetails
 
     init {
-        fetchMovieList()
+        //fetchMovieList()
         getMovieList()
     }
 

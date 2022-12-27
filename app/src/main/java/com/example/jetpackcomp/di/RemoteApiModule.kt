@@ -2,14 +2,14 @@ package com.example.jetpackcomp.di
 
 import com.example.jetpackcomp.data.Api
 import com.example.jetpackcomp.utils.JPConstants
+import com.example.jetpackcomp.utils.JPConstants.END_POINT_API
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import okhttp3.CertificatePinner
-import okhttp3.Interceptor
+
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -43,7 +43,7 @@ object RemoteApiModule {
         return Retrofit.Builder()
             .client(client)
             .addConverterFactory(MoshiConverterFactory.create(moshi))
-            .baseUrl(JPConstants.END_POINT_API)
+            .baseUrl(END_POINT_API)
             .build().create(Api::class.java)
     }
 }

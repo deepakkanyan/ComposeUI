@@ -1,4 +1,4 @@
-package com.example.jetpackcomp.ui.composeUI
+package com.example.jetpackcomp.ui.pages
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -16,25 +16,22 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import coil.compose.AsyncImage
 import com.example.jetpackcomp.model.MovieDetails
 import com.example.jetpackcomp.theme.MyTypography
+import com.example.jetpackcomp.ui.components.BackButton
+import com.example.jetpackcomp.ui.components.JpImage
+import com.example.jetpackcomp.ui.components.ratingView
 import com.example.jetpackcomp.ui.viewmodel.MovieViewModel
-import com.example.jetpackcomp.utils.CommonJetpackUI
-import com.example.jetpackcomp.utils.JPConstants
 
 @Composable
-fun MovieDetailsUI(navController : NavHostController,viewModel: MovieViewModel) {
+fun MovieDetailsPage(navController : NavHostController,viewModel: MovieViewModel) {
        val movieDetails = viewModel.movieDetails.observeAsState().value
        movieDetails?.let { movie ->
             Box {
-                AsyncImage(
-                    model = JPConstants.END_POINT_IMAGE.plus(movieDetails.posterPath),
-                    contentDescription = "",
-                    Modifier.fillMaxWidth(),
-                    contentScale = ContentScale.Crop
-                )
-                CommonJetpackUI.BackButton {
+
+                JpImage(imageUrl = movieDetails.posterPath, scaleType = ContentScale.Crop)
+
+                BackButton {
                     navController.popBackStack()
                 }
 
@@ -56,7 +53,10 @@ fun InfoCard(movie: MovieDetails, modifier: Modifier) {
         shape = RoundedCornerShape(topStart = 30.dp, topEnd = 30.dp),
         modifier = modifier
     ) {
-        Box(Modifier.background(Color.White).fillMaxHeight()) {
+        Box(
+            Modifier
+                .background(Color.White)
+                .fillMaxHeight()) {
             Column(
                 Modifier
                     .verticalScroll(rememberScrollState())
@@ -73,8 +73,8 @@ fun InfoCard(movie: MovieDetails, modifier: Modifier) {
                         Modifier.weight(.8f),
                         style = MyTypography.bodyLarge.copy(fontSize = 26.sp)
                     )
-                    CommonJetpackUI
-                        .ratingView(rating = movie.voteAverage.toString())
+
+                        ratingView(rating = movie.voteAverage.toString())
                         .weight(.2f)
                 }
                 Text(text = movie.originalLanguage, style = MyTypography.bodyLarge)
