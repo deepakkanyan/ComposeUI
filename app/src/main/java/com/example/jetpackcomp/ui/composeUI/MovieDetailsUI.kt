@@ -15,7 +15,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.example.jetpackcomp.model.MovieDetails
@@ -25,15 +24,10 @@ import com.example.jetpackcomp.utils.CommonJetpackUI
 import com.example.jetpackcomp.utils.JPConstants
 
 @Composable
-fun MovieDetailsUI(movieID: String?,navController : NavHostController) {
-    val viewModel = hiltViewModel<MovieViewModel>()
-    movieID?.let { id ->
-        viewModel.getMovieDetailsByID(id.toLong())
-        val movieDetails = viewModel.movieDetails.observeAsState().value
-        movieDetails?.let { movie ->
-
+fun MovieDetailsUI(navController : NavHostController,viewModel: MovieViewModel) {
+       val movieDetails = viewModel.movieDetails.observeAsState().value
+       movieDetails?.let { movie ->
             Box {
-
                 AsyncImage(
                     model = JPConstants.END_POINT_IMAGE.plus(movieDetails.posterPath),
                     contentDescription = "",
@@ -50,10 +44,9 @@ fun MovieDetailsUI(movieID: String?,navController : NavHostController) {
                         .height(300.dp))
 
             }
-
         }
 
-    }
+
 
 }
 

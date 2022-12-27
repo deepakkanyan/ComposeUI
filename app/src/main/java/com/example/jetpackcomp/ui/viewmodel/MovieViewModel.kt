@@ -48,9 +48,9 @@ class MovieViewModel @Inject constructor(private val getPopularMovieList: GetPop
 
     fun getMovieDetailsByID(movieID : Long){
         viewModelScope.launch {
-            getPopularMovieList.getPopularMovieByID(movieID).collect{
-                _movieDetails.value = it
-            }
+                getPopularMovieList.getPopularMovieByID(movieID).collect { movieDetails ->
+                    _movieDetails.value = movieDetails
+                }
         }
     }
 

@@ -15,7 +15,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.example.jetpackcomp.R
@@ -24,12 +23,11 @@ import com.example.jetpackcomp.theme.JPColors
 import com.example.jetpackcomp.ui.viewmodel.MovieViewModel
 import com.example.jetpackcomp.utils.CommonJetpackUI
 import com.example.jetpackcomp.utils.JPConstants
-import com.example.jetpackcomp.utils.addArgument
 
 @Composable
-fun MovieListUI(navController : NavHostController){
-    val viewModel = hiltViewModel<MovieViewModel>()
-    val listData = viewModel.movieList.observeAsState().value ?: arrayListOf()
+fun MovieListUI(navController: NavHostController, viewModel: MovieViewModel){
+
+    val listData  = viewModel.movieList.observeAsState().value ?: arrayListOf()
     Column {
         CommonJetpackUI.JPTopBar(title = stringResource(id = R.string.movie_list))
         LazyVerticalGrid(columns = GridCells.Fixed(2)) {
@@ -40,7 +38,8 @@ fun MovieListUI(navController : NavHostController){
                         .fillMaxWidth()
                         .height(300.dp)
                         .clickable {
-                            navController.navigate(Route.DetailsMovie.addArgument(movie.id))
+                            viewModel.getMovieDetailsByID(movie.id)
+                            navController.navigate(Route.DetailsMovie)
                         },
                     shape = RoundedCornerShape(5.dp)
                 ) {
